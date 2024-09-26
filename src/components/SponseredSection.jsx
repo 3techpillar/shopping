@@ -6,7 +6,7 @@ import { BsInfoCircleFill } from "react-icons/bs";
 const SponseredSection = ({ video, product }) => {
   return (
     <Link href={`/products/${product.id}`}>
-      <div className="flex items-center gap-1 flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden">
+      <div className="hidden sm:flex items-center gap-1 flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden">
         {/* Video Section - 40% */}
         <div className="w-full md:w-4/10 h-[40vh] md:h-[60vh] overflow-hidden">
           <video

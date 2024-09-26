@@ -89,10 +89,10 @@ const ProductPage = ({ params }) => {
 
           {/* Right Side: Product Details */}
           <div className="w-full sm:w-1/2 mt-8">
-            <p className="text-gray-500 uppercase mb-2 font-semibold">
+            <p className="text-gray-500 text-xs sm:text-sm uppercase mb-2 font-semibold">
               {product.category}
             </p>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium mb-2">
+            <h1 className="text-xl sm:text-3xl md:text-4xl font-medium mb-2">
               {product.name}
             </h1>
             <div className="my-2">
@@ -145,7 +145,7 @@ const ProductPage = ({ params }) => {
         </div>
         <div className="border-t-2 border-gray-300 mt-6 pt-4">
           <div id="featured">
-            <h1 className="lg:text-4xl md:text-3xl text-2xl lg:my-5 my-2 font-bold">
+            <h1 className="lg:text-3xl md:text-2xl text-lg lg:my-5 my-2 font-bold">
               Related Products
             </h1>
             <div className="md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 overflow-x-scroll md:overflow-x-visible flex md:flex-none mt-4">

@@ -6,21 +6,14 @@ const page = () => {
     <div className="">
       {/* Header Section */}
       <div
-        className="h-[50vh] bg-cover bg-center flex items-center justify-center"
+        className="h-[20vh] sm:h-[50vh] bg-cover bg-center flex items-center justify-center"
         style={{ backgroundImage: "url('/images/about.jpg')" }}
-      >
-        {/* <div className="bg-black bg-opacity-50 p-10 rounded-lg text-center">
-          <h1 className="text-5xl font-bold text-white mb-4">About Us</h1>
-          <p className="text-xl text-white">
-            Discover Our Vision, Approach, and Process
-          </p>
-        </div> */}
-      </div>
-      <div className="max-w-6xl mx-auto px-6">
+      ></div>
+      <div className="max-w-6xl mx-auto px-3 sm:px-6">
         {/* Vision Section */}
-        <div className="flex flex-col md:flex-row items-center mt-12">
+        <div className="flex flex-col md:flex-row items-center mt-3 sm:mt-12">
           <div className="md:w-1/2 md:pr-6 mb-8 md:mb-0">
-            <h2 className="text-2xl font-bold mb-4">Our Vision</h2>
+            <h2 className="text-xl sm:text-2xl font-bold mb-2">Our Vision</h2>
             <p className="text-gray-700 mb-4">
               At [Your Ecommerce Store], our vision is to create a seamless
               shopping experience that connects people with the products they
@@ -47,9 +40,9 @@ const page = () => {
         </div>
 
         {/* Approach Section */}
-        <div className="flex flex-col md:flex-row items-center mt-12">
+        <div className="flex flex-col md:flex-row items-center mt-3 sm:mt-12">
           <div className="md:w-1/2 md:order-2 md:pl-6 mb-8 md:mb-0">
-            <h2 className="text-2xl font-bold mb-4">Our Approach</h2>
+            <h2 className="text-xl sm:text-2xl font-bold mb-2">Our Approach</h2>
             <p className="text-gray-700 mb-4">
               Our approach is customer-centric. We focus on understanding our
               customers needs and preferences to offer a curated selection of
@@ -75,9 +68,9 @@ const page = () => {
           </div>
         </div>
         {/* our process */}
-        <div className="flex flex-col md:flex-row items-center my-12">
+        <div className="flex flex-col md:flex-row items-center my-3 sm:my-12">
           <div className="md:w-1/2 md:pr-6 mb-8 md:mb-0">
-            <h2 className="text-2xl font-bold mb-4">Our Process</h2>
+            <h2 className="text-xl sm:text-2xl font-bold mb-2">Our Process</h2>
             <p className="text-gray-700 mb-4">
               Our process is designed to be efficient, user-friendly, and
               secure. From the moment you land on our website, we strive to

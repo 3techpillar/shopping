@@ -5,8 +5,8 @@ import Link from "next/link";
 
 const Category = () => {
   return (
-    <div className="container mx-auto py-3">
-      <h1 className="lg:text-4xl md:text-3xl text-2xl my-2 font-bold">
+    <div className="py-1">
+      <h1 className="lg:text-3xl md:text-2xl text-lg hidden sm:block mt-2 sm:mt-4 font-bold">
         Categories
       </h1>
       <div className="flex justify-center overflow-x-auto space-x-4">
@@ -20,7 +20,7 @@ const Category = () => {
                 height={50}
               />
 
-              <p className="text-sm sm:text-base text-center">
+              <p className="text-xs sm:text-base text-center">
                 {category.title}
               </p>
             </div>
