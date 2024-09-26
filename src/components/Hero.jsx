@@ -28,7 +28,7 @@ const Hero = () => {
   }, [currentIndex]);
 
   return (
-    <div className="h-[30vh] md:h-[70vh] w-full m-auto relative group">
+    <div className="h-[25vh] md:h-[70vh] w-full m-auto relative group">
       <Link href={"/products"}>
         <div
           style={{ backgroundImage: `url(${slides[currentIndex].image})` }}

@@ -6,12 +6,14 @@ import { RiMenu2Fill } from "react-icons/ri";
 import { RxCross1 } from "react-icons/rx";
 import { BsPerson } from "react-icons/bs";
 import { CgLogOut } from "react-icons/cg";
+import { facebook, youtube, instagram } from "@/data/assets";
 
 import Link from "next/link";
 import Logo from "./Logo";
 
 import { CartContext } from "@/context/CartContext";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const Navbar = () => {
   const { cartItems } = useContext(CartContext);
@@ -178,6 +180,48 @@ const Navbar = () => {
                   Terms & Conditions
                 </div>
               </Link>
+              <div className="flex flex-row gap-3 px-2">
+                <Link
+                  href={
+                    "https://www.facebook.com/profile.php?id=61563291367273&mibextid=ZbWKwL"
+                  }
+                  target="_blank"
+                >
+                  <Image
+                    src={facebook}
+                    alt="payment"
+                    width={30}
+                    height={30}
+                    className="cursor-pointer"
+                  />
+                </Link>
+                <Link
+                  href={
+                    "https://www.instagram.com/chotiwalepurecamphor?igsh=bW84MWY4ZTBweGJp"
+                  }
+                  target="_blank"
+                >
+                  <Image
+                    src={instagram}
+                    alt="payment"
+                    width={30}
+                    height={30}
+                    className="cursor-pointer"
+                  />
+                </Link>
+                <Link
+                  href={"https://www.youtube.com/@avon_trading_chotiwalekapoor"}
+                  target="_blank"
+                >
+                  <Image
+                    src={youtube}
+                    alt="payment"
+                    width={30}
+                    height={30}
+                    className="cursor-pointer"
+                  />
+                </Link>
+              </div>
             </div>
           </div>
         )}
