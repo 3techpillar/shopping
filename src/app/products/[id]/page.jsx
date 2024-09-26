@@ -148,9 +148,11 @@ const ProductPage = ({ params }) => {
             <h1 className="lg:text-4xl md:text-3xl text-2xl lg:my-5 my-2 font-bold">
               Related Products
             </h1>
-            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 overflow-x-scroll md:overflow-x-visible flex md:flex-none mt-4">
               {featuredProducts.map((product) => (
-                <ProductCard key={product.id} product={product} />
+                <div key={product.id}>
+                  <ProductCard product={product} />
+                </div>
               ))}
             </div>
           </div>
