@@ -6,6 +6,8 @@ import Spritual from "@/components/Spritual";
 import Phones from "@/components/Phones";
 import DeliverySection from "@/components/Delivery";
 import Recent from "@/components/Recent";
+import Banner from "@/components/Banner";
+import { slide1, slide2, slide3 } from "@/data/assets";
 
 export default function Home() {
   const featuredProducts = products.filter((product) => product.featured);
@@ -17,9 +19,9 @@ export default function Home() {
         <Hero />
       </div>
 
-      <div className="max-w-7xl mx-auto px-3 sm:px-0">
+      <div>
         <Category />
-        <div id="featured">
+        <div id="featured" className="max-w-7xl mx-auto px-3 sm:px-0">
           <h1 className="lg:text-3xl md:text-2xl text-lg lg:my-5 my-2 font-bold">
             New Arrival
           </h1>
@@ -32,7 +34,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="featured">
+        <Banner src={slide1} />
+
+        <div id="featured" className="max-w-7xl mx-auto px-3 sm:px-0">
           <h1 className="lg:text-3xl md:text-2xl text-lg lg:mt-8 lg:mb-4 my-2 font-bold">
             Featured Products
           </h1>
@@ -48,7 +52,12 @@ export default function Home() {
 
       <div className="mt-8">
         <Spritual />
+        <Banner src={slide2} />
+
         <Phones />
+
+        <Banner src={slide3} />
+
         <div className="max-w-7xl mx-auto px-3 sm:px-0 my-3">
           <div>
             <h1 className="lg:text-3xl md:text-2xl text-lg lg:my-5 my-2 font-bold">
