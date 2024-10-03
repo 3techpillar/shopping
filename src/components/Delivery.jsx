@@ -20,7 +20,7 @@ const DeliverySection = () => {
   ];
 
   return (
-    <div className="bg-blue-100 py-8">
+    <div className="bg-blue-100 py-8 mt-8 md:mb-8 mx-3 sm:mx-24">
       <div className="container mx-auto px-4">
         <div className="flex flex-row justify-between items-center">
           {features.map((feature, index) => (

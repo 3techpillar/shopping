@@ -3,6 +3,7 @@ import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SocialBar from "@/components/SocialBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.className} bg-[#F0F0F0]`}>
         <CartProvider>
+          <SocialBar />
           <Navbar />
           {children}
           <Footer />
