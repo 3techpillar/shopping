@@ -1,7 +1,8 @@
-import { payment, facebook, youtube, instagram } from "@/data/assets";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Youtube from "./Youtube";
+import Instagram from "./Instagram";
+import Facebook from "./Facebook";
 
 const Footer = () => {
   return (
@@ -109,46 +110,9 @@ const Footer = () => {
         <div className="mt-10 flex gap-3 flex-col justify-center items-center">
           {/* Payment methods */}
           <div className="flex flex-row gap-3">
-            <Link
-              href={
-                "https://www.facebook.com/profile.php?id=61563291367273&mibextid=ZbWKwL"
-              }
-              target="_blank"
-            >
-              <Image
-                src={facebook}
-                alt="payment"
-                width={40}
-                height={40}
-                className="cursor-pointer"
-              />
-            </Link>
-            <Link
-              href={
-                "https://www.instagram.com/chotiwalepurecamphor?igsh=bW84MWY4ZTBweGJp"
-              }
-              target="_blank"
-            >
-              <Image
-                src={instagram}
-                alt="payment"
-                width={40}
-                height={40}
-                className="cursor-pointer"
-              />
-            </Link>
-            <Link
-              href={"https://www.youtube.com/@avon_trading_chotiwalekapoor"}
-              target="_blank"
-            >
-              <Image
-                src={youtube}
-                alt="payment"
-                width={40}
-                height={40}
-                className="cursor-pointer"
-              />
-            </Link>
+            <Facebook size={40} />
+            <Instagram size={40} />
+            <Youtube size={40} />
           </div>
           <p className="text-sm text-gray-400">
             Copyright © Chotiwale All Rights Reserved.

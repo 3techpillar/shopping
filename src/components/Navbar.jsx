@@ -32,7 +32,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-white border-b border-gray-200 px-2 py-1 md:px-16 flex items-center justify-between gap-5">
+      <nav className="bg-white border-b border-gray-200 px-2 py-1 md:px-16 flex items-center justify-between gap-5 sticky top-0 z-50">
         <div className="flex-1 sm:flex items-center justify-start gap-12 text-lg hidden">
           <Link href={"/"}>
             <p
@@ -230,4 +230,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default React.memo(Navbar);

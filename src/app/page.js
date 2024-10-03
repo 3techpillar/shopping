@@ -25,7 +25,7 @@ export default function Home() {
           <h1 className="lg:text-3xl md:text-2xl text-lg lg:my-5 my-2 font-bold">
             New Arrival
           </h1>
-          <div className="md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 overflow-x-scroll md:overflow-x-visible flex md:flex-none">
+          <div className="md:grid md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 overflow-x-scroll md:overflow-x-visible flex md:flex-none">
             {newArrival.map((product) => (
               <div key={product.id}>
                 <ProductCard product={product} />
@@ -36,11 +36,11 @@ export default function Home() {
 
         <Banner src={slide1} />
 
-        <div id="featured" className="max-w-7xl mx-auto px-3 sm:px-0">
+        <div id="featured" className="max-w-7xl mx-auto px-3 sm:px-0 pb-5">
           <h1 className="lg:text-3xl md:text-2xl text-lg lg:mt-8 lg:mb-4 my-2 font-bold">
             Featured Products
           </h1>
-          <div className="md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 overflow-x-scroll md:overflow-x-visible flex md:flex-none">
+          <div className="md:grid md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 overflow-x-scroll md:overflow-x-visible flex md:flex-none">
             {featuredProducts.map((product) => (
               <div key={product.id}>
                 <ProductCard product={product} />
@@ -50,7 +50,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-8">
+      <div className="mt-4 md:mt-8">
         <Spritual />
         <Banner src={slide2} />
 
@@ -63,7 +63,7 @@ export default function Home() {
             <h1 className="lg:text-3xl md:text-2xl text-lg lg:my-5 my-2 font-bold">
               Recent viewed Products
             </h1>
-            <div className="md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 overflow-x-scroll md:overflow-x-visible flex md:flex-none mt-3">
+            <div className="md:grid md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 overflow-x-scroll md:overflow-x-visible flex md:flex-none mt-3">
               {featuredProducts.map((product) => (
                 <div key={product.id}>
                   <ProductCard product={product} />

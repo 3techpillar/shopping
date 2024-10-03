@@ -4,7 +4,6 @@ import { products } from "@/data/products";
 import Image from "next/image";
 import Link from "next/link";
 import { useContext } from "react";
-import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { FaWpforms } from "react-icons/fa6";
 
 export default function ProductCard({ product }) {
@@ -15,15 +14,9 @@ export default function ProductCard({ product }) {
     ((product.originalPrice - product.price) / product.originalPrice) * 100
   );
 
-  const trimDescription = (description, num) => {
-    const words = description.split(" ");
-    if (words.length > num) {
-      return words.slice(0, num).join(" ") + "...";
-    }
-    return description;
-  };
+
   return (
-    <div class="relative w-[150px] sm:w-[200px] md:w-[300px] bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden group">
+    <div class="relative w-[150px] sm:w-[200px] md:w-[300px] md:pb-3 bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden group">
       <Link href={`/products/${product.id}`}>
         <div class="absolute z-10 top-2 left-2 bg-purple-100 text-blue-600 text-xs font-semibold px-2 py-1 rounded-full">
           {discountPercentage}% off
@@ -39,13 +32,13 @@ export default function ProductCard({ product }) {
           />
         </div>
 
-        <div class="p-4">
-          <h3 class="text-gray-800 font-semibold text-xs sm:text-lg line-clamp-1">
+        <div class="p-1 md:p-4">
+          <h3 class="text-gray-800 font-semibold text-sm sm:text-lg line-clamp-1">
             {product.name}
           </h3>
-          <p class="text-gray-600 mt-2 hidden sm:block">
-            {trimDescription(product.description, 7)}
-          </p>
+          <h5 class="text-gray-600 text-xs sm:text-sm line-clamp-2">
+            {product.description}
+          </h5>
 
           <div class="mt-2 flex justify-between items-center">
             <div>
@@ -69,7 +62,7 @@ export default function ProductCard({ product }) {
         onClick={() => addToCart(items)}
         className="hidden sm:block absolute bottom-4 right-4 bg-black/80 text-white text-sm font-semibold p-2 rounded-lg hover:bg-black"
       >
-        <FaWpforms size={24} />
+        <FaWpforms size={20} />
       </button>
     </div>
   );

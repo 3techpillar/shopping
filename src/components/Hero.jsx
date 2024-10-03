@@ -1,9 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
-import { RxDotFilled } from "react-icons/rx";
 import { slides } from "@/data/products";
-import Link from "next/link";
+
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,34 +26,26 @@ const Hero = () => {
   }, [currentIndex]);
 
   return (
-    <div className="h-[25vh] md:h-[70vh] w-full m-auto relative group">
-      <Link href={"/products"}>
-        <div
-          style={{ backgroundImage: `url(${slides[currentIndex].image})` }}
-          className="w-full h-full bg-center bg-cover duration-500 flex items-center justify-between flex-col md:flex-row px-6 sm:px-10 md:px-14 lg:px-16"
-        ></div>
-      </Link>
-      {/* left Arrow */}
-      <div className="hidden  sm:group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-2 text-2xl rounded-full p-1 sm:p-2 bg-black/20 text-white cursor-pointer">
-        <BsChevronCompactLeft onClick={prevSlide} size={25} />
-      </div>
-      {/* Right Arrow */}
-      <div className="hidden sm:group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-2 text-2xl rounded-full p-1 sm:p-2 bg-black/20 text-white cursor-pointer">
-        <BsChevronCompactRight onClick={nextSlide} size={25} />
-      </div>
-      <div className="flex top-4 justify-center py-2">
-        {slides.map((slide, slideIndex) => (
-          <div
-            key={slideIndex}
-            onClick={() => setCurrentIndex(slideIndex)}
-            className="text-2xl cursor-pointer hidden group-hover:block"
-          >
-            <RxDotFilled />
-          </div>
+      <div className="relative w-full overflow-hidden">
+      <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+        {slides.map((slide, index) => (
+          <img key={index} src={slide.image} alt={`Slide ${index + 1}`} className="w-full h-auto flex-shrink-0" />
         ))}
       </div>
+      <button
+        onClick={prevSlide}
+        className="absolute left-2 md:left-5 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg z-10"
+      >
+        &lt;
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute right-2 md:right-5 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg z-10"
+      >
+        &gt;
+      </button>
     </div>
-  );
+    );
 };
 
 export default Hero;

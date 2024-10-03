@@ -33,11 +33,11 @@ const Spritual = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto my-3 sm:my-7 px-3 sm:px-0">
-        <h1 className="lg:text-3xl md:text-2xl text-lg lg:my-5 my-2 font-bold">
+      <div className="max-w-7xl mx-auto my-3 sm:my-7 px-3 sm:px-0 py-5">
+        <h1 className="lg:text-3xl md:text-2xl text-lg lg:my-5 my-1 font-bold">
           Spritiual Products
         </h1>
-        <div className="md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 overflow-x-scroll md:overflow-x-visible flex md:flex-none">
+        <div className="md:grid md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 overflow-x-scroll md:overflow-x-visible flex md:flex-none">
           {spiritualCategory.map((category) => (
             <div key={category.id}>
               <ProductCard product={category} />
@@ -45,7 +45,7 @@ const Spritual = () => {
           ))}
         </div>
 
-        <div className=" my-1 sm:my-8 w-full">
+        <div className=" my-1 md:my-8 w-full md:py-5">
           <SponseredSection video={camphor} product={featuredProduct} />
         </div>
       </div>

@@ -16,7 +16,7 @@ const Phones = () => {
         <h1 className="lg:text-3xl md:text-2xl text-lg lg:my-5 my-1 font-bold">
           Best Seller
         </h1>
-        <div className="md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 overflow-x-scroll md:overflow-x-visible flex md:flex-none mt-4">
+        <div className="md:grid md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 overflow-x-scroll md:overflow-x-visible flex md:flex-none mt-4">
           {carFreshner.map((category) => (
             <div key={category.id}>
               <ProductCard product={category} />
@@ -24,7 +24,7 @@ const Phones = () => {
           ))}
         </div>
 
-        <div className="my-1 sm:my-8 w-full">
+        <div className="my-1 sm:my-8 w-full md:py-5">
           <SponseredSection video={kapore} product={featuredProduct} />
         </div>
       </div>
